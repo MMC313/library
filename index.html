@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Library</title>
+</head>
+<body>
+    <div class="site-header">
+        <div class="iconhead">
+            <img class="icon" src="./images/Icongif.gif" alt="animated desk">
+            <div>Online Library</div>
+        </div>
+        <button class="login"> <img class="coffee" src="./images/coffeeT.gif" alt=""> | Sign in with Google</button>
+    </div>
+    <div class="list">
+        <div class="list-headers">
+            <div>Title</div>
+            <div>Author</div>
+            <div>Pages Read</div>
+            <div>Status</div>
+            <div>
+                <div>Actions</div>
+            </div>
+        </div>
+        <div id="booklist">
+        </div>
+       
+        <form id="form" action="">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" required>
+            <label for="author">Author:</label>
+            <input type="text" name="author" id="author">
+            <label for="pages">Pages Read:</label>
+            <input type="text" name="pages" id="pages">
+            <label for="read">Completed:</label>
+            <select name="read" id="read">
+                <option value="READ">Yes</option>
+                <option value="NOT READ">No</option>
+            </select>
+            <div>
+                <button type="submit" id="submit">Submit</button>
+                <button id="cancel">Done</button>
+            </div>
+        </form>
+
+
+        
+        
+    </div>
+    <div class="addBtn">
+        <button class="add">+</button>
+    </div>
+        
+    <div class="footer">
+        <div>MartianMooCow ©</div>
+    </div>
+    
+   
+</body>
+</html>
