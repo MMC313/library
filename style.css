@@ -1,0 +1,273 @@
+@font-face {
+    font-family: poppins-regular;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 3px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(180deg);
+    }
+
+}
+
+@keyframes reversespin {
+    from {
+        transform:rotate(180deg);
+    }
+    to {
+        transform:rotate(0deg);
+    }
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height: 100vh;
+    background: url(./images/livingroom.webp)no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    
+    
+}
+
+.site-header{
+    display: flex;
+    justify-content: space-between;
+    height: 75px;
+    align-items: center;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    background-image: linear-gradient(180deg,#f97316,#525695);
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: poppins-regular;
+    outline: 2px solid black;
+   
+    box-shadow: -3px 3px 5px black;
+}
+
+.iconhead{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon{
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: -3px 3px 5px black ;
+    
+}
+
+.coffee{
+    height: auto;
+    width: 25px;
+}
+
+.login{
+    appearance: none;
+    border: none;
+    padding: 8px 15px 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background-color: #ea580c;
+    color: black;
+    border-radius: 5px;
+    box-shadow: -3px 3px 5px black;
+}
+
+.login:hover{
+    animation-name: floating;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.login:active{
+    animation: none;
+    transform: translateY(3px);
+}
+
+
+.list{
+    height:auto;
+    text-align: center;
+    padding: 0 10vw 0 10vw  ;
+    margin-top: 20px;
+    font-family: poppins-regular;
+    position: relative;
+    top: 20px;
+    
+    
+}
+
+
+
+.list-headers{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr;
+    color: white;
+    backdrop-filter: blur(20px);
+    font-size: 25px;
+    font-weight: 700;
+    padding: 15px 0 15px 0;
+    border-radius: 10px;
+    text-decoration:underline;
+    background-image: url(./images/bookshelf.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+   
+}
+
+
+
+
+#booklist{
+    padding-top: 10px;
+}
+
+#booklist > div{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.read{
+    margin-bottom: 7px;
+    background-image: linear-gradient(160deg,#0e7490,#10b981);
+    color: white;
+    padding: 3px;
+    box-shadow: -3px 3px 5px black;
+    border-radius: 3px;
+}
+
+.not-read{
+    margin-bottom: 7px;
+    background-image: linear-gradient(160deg,#d1d5db,#4b5563);
+    color: black;
+    padding: 3px;
+    box-shadow: -3px 3px 5px black;
+    border-radius: 3px;
+}
+
+.actions{
+    display: flex;
+    flex-direction: column;
+    gap:3px;
+}
+
+.remove,.update{
+    appearance: none;
+    border: none;
+    width: 75px;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px black;
+
+
+}
+
+button:active{
+    transform:translateY(1px);
+}
+
+.update{
+    background-image: linear-gradient(-45deg,#155e75,#22d3ee);
+    font-weight: 700;
+}
+
+.remove{
+    background-image: linear-gradient(-45deg,#b91c1c,#ef4444);
+    font-weight: 700;
+}
+
+.addBtn{
+    display: flex;
+    justify-content: right;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+
+}
+
+.add{
+    appearance: none;
+    outline: none;
+    border: none;
+    
+    font-size: 40px;
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    opacity: 60%;
+    
+    animation-name: reversespin;
+    animation-duration: 250ms;
+    animation-iteration-count: 1;
+    animation-timing-function:linear; 
+}
+
+.add:hover{
+    opacity: 100%;
+    
+    animation-name: spin;
+    animation-duration: 250ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    height: 52px;
+    width: 52px;
+    border-radius: 50px;
+    
+}
+
+
+
+form{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    outline: 1px solid black;
+    position:fixed;
+    right: 0;
+    left: 0;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 100px;
+    background-image: linear-gradient(0deg,#64748b,#0f172a);
+    color: white;
+    padding: 20px 10px 20px 10px;
+    border-radius: 5px;
+    box-shadow: -3px 3px 5px black;
+    gap: 5px;
+    
+}
+
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+   
+}
+
